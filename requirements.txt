@@ -1,0 +1,7 @@
+requests
+openai
+dotenv
+schedule
+time
+csv
+snowflake-connector-python
