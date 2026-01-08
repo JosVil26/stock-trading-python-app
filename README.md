@@ -1,6 +1,6 @@
 # Stock Trading Python App
 
-A data pipeline application that fetches real-time stock ticker data from the Polygon.io API and loads it into Snowflake for data warehousing and analysis.
+A data pipeline application that fetches real-time stock ticker data from the Polygon.io API and loads it into Snowflake for data warehousing and analysis. This project is part of [The Absolutely Free Beginner Data Engineering Boot Camp](https://learn.dataexpert.io/program/the-absolute-beginner-data-engineering-boot-camp-starting-august-7th-6453)
 
 ## Overview
 
@@ -55,7 +55,6 @@ The application captures the following fields for each ticker:
 
 ```
 requests                    # HTTP client for API calls
-openai                      # OpenAI API integration
 python-dotenv              # Environment variable management
 schedule                   # Job scheduling
 snowflake-connector-python # Snowflake database connector
@@ -117,7 +116,7 @@ The scheduler runs the stock data job every minute by default and will continuou
 
 1. **Authentication**: Retrieves Polygon.io API key from environment variables
 2. **Pagination**: Iterates through all active stock tickers using the Polygon.io reference API
-3. **Rate Limiting**: Implements a pause (70 seconds) after every 5 API requests to respect rate limits
+3. **Rate Limiting**: Implements a pause (70 seconds) after every 5 API requests to respect rate limits. This is because I use the free account for Polygon.io API.
 4. **Data Enrichment**: Adds a data snapshot date (`ds`) to each record
 5. **Snowflake Loading**: 
    - Establishes secure connection to Snowflake
@@ -170,13 +169,15 @@ When contributing to this project:
 3. Add appropriate logging for debugging
 4. Update environment variable documentation
 
-## License
-
-[Add your license information here]
-
 ## Support
 
 For issues with:
 - **Polygon.io API**: Check [Polygon.io documentation](https://polygon.io/docs)
 - **Snowflake**: Consult [Snowflake documentation](https://docs.snowflake.com)
 - **Project**: Review code comments and inline documentation
+
+## Author: José Villegas
+
+## Follow me on
+- GitHub: [@JosVil26](https://github.com/JosVil26)
+- LinkedIn: [@josevillegasm](https://www.linkedin.com/in/josevillegasm/)
